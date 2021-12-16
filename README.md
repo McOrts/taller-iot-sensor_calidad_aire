@@ -6,7 +6,12 @@ En este taller vamos a construir un sensor que medirá los siguientes indicadore
 * Humedad
 * Presión atmosférica
 
-El sensor está basado en un microcontrolador ESP8266 montado en una placa NodeMCU que permite conectividad WiFi. A través de la cual, los datos serán transmitidos a la plataforma abierta de [Sensor Community](https://sensor.community/es/). De esta forma, además de poder ver la información de nuestro dispositivo en una web. Estatemos dando a conocer una información interesante para otros ciudadanos y colaborando para la realialización de estudios climáticos que nos benefician a todos.
+El dispositivo está basado en un microcontrolador ESP8266 montado en una placa NodeMCU que permite conectividad WiFi. A través de la cual, los datos serán transmitidos a la plataforma abierta de [Sensor Community](https://sensor.community/es/). De esta forma, además de poder ver la información de nuestro dispositivo en una web. Estatemos dando a conocer una información interesante para otros ciudadanos y colaborando para la realialización de estudios climáticos que nos benefician a todos.
+
+Principio de funcionamiento
+Uso del principio de dispersión láser:
+La dispersión de la luz puede ser inducida cuando las partículas pasan por el área de detección. La luz dispersa se transforma en señales eléctricas y estas señales se amplificarán y procesarán. El número y el diámetro de las partículas se pueden obtener mediante análisis porque la forma de onda de la señal tiene ciertas relaciones con el diámetro de las partículas.
+
 
 
 ![](https://sensor.community/docs/airrohr/particulate-matter-air-quality-sensor-kit.jpeg)
