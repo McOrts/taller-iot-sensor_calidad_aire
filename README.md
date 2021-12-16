@@ -6,8 +6,8 @@ En este taller vamos a construir un sensor que medirá los siguientes indicadore
 * Humedad
 * Presión atmosférica
 
-El sensor está basado en un microcontrolador ESP8266 montado en una placa NodeMCU que permite conectividad WiFi. A través de la cual los datos serán transmitidos a la plataforma abierta de [Sensor Community] https://sensor.community/es/
-Construye tu sensor DIY y conviértete en parte de la red mundial de trabajo opendata y civitech. Con airRohr puedes medir la contaminación del aire tú mismo.
+El sensor está basado en un microcontrolador ESP8266 montado en una placa NodeMCU que permite conectividad WiFi. A través de la cual, los datos serán transmitidos a la plataforma abierta de [Sensor Community](https://sensor.community/es/). De esta forma, además de poder ver la información de nuestro dispositivo en una web. Estatemos dando a conocer una información interesante para otros ciudadanos y colaborando para la realialización de estudios climáticos que nos benefician a todos.
+
 
 ![](https://sensor.community/docs/airrohr/particulate-matter-air-quality-sensor-kit.jpeg)
 
