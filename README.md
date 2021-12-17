@@ -7,23 +7,25 @@ En este taller vamos a construir un sensor que medirá los siguientes indicadore
 * Presión atmosférica
 
 <img src="./img/sensor_comunity_mapa.png" width="300" align="right" />
+
 El dispositivo está basado en un microcontrolador ESP8266 montado en una placa NodeMCU que permite conectividad WiFi. A través de la cual, los datos serán transmitidos a la plataforma abierta de [Sensor Community](https://sensor.community/es/). De esta forma, además de poder ver la información de nuestro dispositivo en una web. Estatemos dando a conocer una información interesante para otros ciudadanos y colaborando para la realialización de estudios climáticos que nos benefician a todos.
 
 ## ¿Cómo se detectan las partículas en el aire? 
 Uso del principio de dispersión láser:
 La dispersión de la luz puede ser inducida cuando las partículas pasan por el área de detección. La luz dispersa se transforma en señales eléctricas y estas señales se amplificarán y procesarán. El número y el diámetro de las partículas se pueden obtener mediante análisis porque la forma de onda de la señal tiene ciertas relaciones con el diámetro de las partículas.
 
-![](https://sensor.community/docs/airrohr/particulate-matter-air-quality-sensor-kit.jpeg)
+## Lista de material
 
-### [](https://sensor.community/airrohr/es#Lista_de_compras)Lista de compras
+<img src="https://sensor.community/docs/airrohr/particulate-matter-air-quality-sensor-kit.jpeg" width="600"  />
 
-##### [](https://sensor.community/airrohr/es#false)Kit de sensores
+### Kit de sensores
 
 -   [Kit de sensores predestinados](https://nettigo.eu/products/luftdaten-org-pl-kit-sds011-bme280)
 
-##### [](https://sensor.community/airrohr/es#false)Componentes individuales
+### Componentes individuales
 
 -   [NodeMCU ESP8266 CPU/WLAN](https://www.aliexpress.com/wholesale?groupsort=1&SortType=price_asc&SearchText=nodemcu+v3+esp8266+ch340)
+    La placa base para NocdeMCUs v3 es normalmente CH341, comprueba la parte trasera de tu NodeMCU (ESP8266) para encontrar la información técnica.
 -   [SDS011 Sensor de polvo fino](http://www.aliexpress.com/wholesale?groupsort=1&SortType=price_asc&SearchText=sds011)
 -   BME280 6-PIN, temperatura, humedad y presión atmosférica.
     -   [via Aliexpress](https://www.aliexpress.com/wholesale?catId=0&initiative_id=SB_20200308040440&SearchText=bme280+-5V+%2B3.3V)
@@ -36,53 +38,45 @@ La dispersión de la luz puede ser inducida cuando las partículas pasan por el 
 -   Un tubo flexible y que no sea transparente. Con un diámetro de 6 mm y una longitud aproximada de 20 cm de la tienda de bricolaje
 -   [Protección contra el mal tiempo, Marley Silent HT Abrc DN 75 87°](https://www.bauhaus.info/rohrsysteme/marley-ht-bogen-/p/13625028)
 
-🙌 ¡Bien, compraste los componentes online! Sin embargo, el reparto puede tardar de aquí a tres semanas. Hasta entonces disfruta tu vida.
+## Conectar el microcontrolador al ordenador
 
-Driver & firmware[](https://sensor.community/es/sensors/airrohr#Driver_and_firmware)[](https://github.com/opendata-stuttgart/sensor.community/edit/develop/content/airrohr/en//01-firmware.md "edit on Github")
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Una vez que tengamos el hardware. Empezaremos por instalar los drivers y conectar el NodeMCU(ESP8266).
+Para comunicarse con el NodeMCU (ESP8266) necesitamos diferentes controladores en función del sistema operativo. Elige la url correspondiente al sistema operativo de tu ordenador.
 
-Ya hemos preparado el firmware. Tú solo tienes que instalar los drivers y conectar tu NodeMCU(ESP8266).
+### Windows
 
-Para comunicarte con el NodeMCU (ESP8266) necesitas controladores para tu sistema operativo.
-
-La placa base para NocdeMCUs v3 es normalmente CH341, comprueba la parte trasera de tu NodeMCU (ESP8266) para encontrar la información técnica.
-
-Elige la url correspondiente al sistema operativo de tu ordenador.
-
-### [](https://sensor.community/airrohr/es#Windows)Windows
-
-##### [](https://sensor.community/airrohr/es#false)Drivers para NodeMCU (ESP8266) V2 (CP2102) en Windows
+#### Drivers para NodeMCU (ESP8266) V2 (CP2102) en Windows
 
 -   [Windows 10](https://www.silabs.com/documents/public/software/CP210x_Universal_Windows_Driver.zip) - Windows 10 - Windows 10 debería descargarlo automáticamente
 -   [Windows 7/8/8.1](https://www.silabs.com/documents/public/software/CP210x_Windows_Drivers.zip) - 32-bit version - no soporta la versión 64-bit OS
 
-##### [](https://sensor.community/airrohr/es#false)Driver for NodeMCU (ESP8266) V3 (CH340/CH341) for Windows
+#### Driver for NodeMCU (ESP8266) V3 (CH340/CH341) for Windows
 
 -   [Windows](http://www.wch.cn/downloads/file/5.html) - Windows 10 debería descargarlo automáticamente
 
-##### [](https://sensor.community/airrohr/es#false)Extraer el archivo descargado para Windows:
+#### Extraer el archivo descargado para Windows:
 
 -   Para el NodeMCU (ESP8266) V2: Abre la carpera CP210x y haz doble click en el archivo CP210xVCPInstaller_x64 (or x86)
 -   Para el NodeMCU (ESP8266) V3: Abre la carpeta CH341SER y haz doble click en el archivo SETUP.
 
-### [](https://sensor.community/airrohr/es#MacOS)MacOS
+### MacOS
 
-##### [](https://sensor.community/airrohr/es#false)MacOS Drivers
+#### MacOS Drivers
 
 -   [NodeMCU V2](https://www.silabs.com/documents/public/software/Mac_OSX_VCP_Driver.zip)
 -   [NodeMCU V3](http://www.wch.cn/downloads/file/178.html)
 
-##### [](https://sensor.community/airrohr/es#false)Extrae el archivo descargado para MacOS.
+#### Extrae el archivo descargado para MacOS.
 
 -   Para V2: descomprime la carpeta CP210x y haz doble click en el archivo CP210xVCPInstaller_x64 (o x86)
 -   for V3: descomprime la carpeta folder CH341SER y haz doble click en el archivo SETUP.
 -   Reinicia tu Mac
 
-### [](https://sensor.community/airrohr/es#Linux)Linux
+### Linux
 
 No es necesario instalar los drivers. El chip debe estar instalado (puedes verificarlo con dmesg)
 
-### [](https://sensor.community/airrohr/es#Firmware_Flasher)Firmware Flasher
+## Firmware Flasher. Carga del programa.
 
 Soporte para múltiples sistemas operativos: Windows, MacOS and Linux.
 
@@ -90,16 +84,13 @@ Soporte para múltiples sistemas operativos: Windows, MacOS and Linux.
 -   [Source Code](https://github.com/opendata-stuttgart/airrohr-firmware-flasher/)
 
 Conecta el NodeMCU a tu ordenador con un cable micro-USB (elige un cable que no sea más largo de 1 metro, si no, la instalación podría fallar). Selecciona latest_en.bin (o el lenguaje que prefieras) y haz click en "Upload". Espera hasta que finalice el proceso. Ahora puedes conectar el sensor.\
-¡Muchas gracias a [Piotr, from Poland](https://dropbox.inf.re/), por su ayuda! 🙋‍♂️
 
-Assemble[](https://sensor.community/es/sensors/airrohr#Assemble)[](https://github.com/opendata-stuttgart/sensor.community/edit/develop/content/airrohr/en//02-assemble.md "edit on Github")
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-> ⚠️ NOTA IMPORTANTE Antes de la conexión, instala el firmware. Echa un vistazo a la sección firmware flasher.
+## Montaje
+> ⚠️ NOTA IMPORTANTE Antes de hacer las conexiones, completra el paso anterior de instalar el firmware
 
 ### [](https://sensor.community/airrohr/es#NodeMCU_v3)NodeMCU v3
 
-Nota: Nuestras instrucciones hacen referencia a la versión 3 del NodeMCU. Puede ser reconocido por las conexiones VU y G (ver el dibujo).
+Nota: estas instrucciones hacen referencia a la versión 3 del NodeMCU. Puede ser reconocido por las conexiones VU y G (ver el dibujo).
 
 ![](https://sensor.community/docs/airrohr/airrohr-wiring-sds011-bme280.jpg) Copyright: roman-minyaylov, MIT License ![](https://sensor.community/docs/airrohr/nodemcu-v3-bme280.jpeg)
 
@@ -250,6 +241,8 @@ Ingrese lo siguiente en el navegador con sus propios datos: `https://api-rrd.ma
 -   [REGISTRARSE](https://sensor.community/es/sensors/airrohr#Registrarse)[Crea una cuenta](https://sensor.community/es/sensors/airrohr#Crea_una_cuenta)[Registra tu dispositivo](https://sensor.community/es/sensors/airrohr#Registra_tu_dispositivo)
 -   [TROUBLESHOOT](https://sensor.community/es/sensors/airrohr#Troubleshoot)[¿Transmite de manera errónea?](https://sensor.community/es/sensors/airrohr#Transmite_de_manera_erronea)[¿Problemas con el cable USB?](https://sensor.community/es/sensors/airrohr#Problemas_con_el_cable_USB)[¿Problemas electrónicos?](https://sensor.community/es/sensors/airrohr#Problemas_electronicos)
 
+## Agradecimientos 🙋‍
+¡[Piotr, from Poland](https://dropbox.inf.re/)
 ![Sensor.Community](https://sensor.community/)
 
-Hacer del mundo un lugar mejor a través de datos ambientales abiertos y dirigidos por la comunidad.
+**Gracias a todos por hacer del mundo un lugar mejor a través de datos ambientales abiertos y dirigidos por la comunidad.**
