@@ -88,15 +88,15 @@ Conecta el NodeMCU a tu ordenador con un cable micro-USB (elige un cable que no 
 ## Montaje
 > ⚠️ NOTA IMPORTANTE Antes de hacer las conexiones, completra el paso anterior de instalar el firmware
 
-### [](https://sensor.community/airrohr/es#NodeMCU_v3)NodeMCU v3
+### NodeMCU v3
 
 Nota: estas instrucciones hacen referencia a la versión 3 del NodeMCU. Puede ser reconocido por las conexiones VU y G (ver el dibujo).
+<img src="https://sensor.community/docs/airrohr/airrohr-wiring-sds011-bme280.jpg" width="600"  />
 
-![](https://sensor.community/docs/airrohr/airrohr-wiring-sds011-bme280.jpg) Copyright: roman-minyaylov, MIT License ![](https://sensor.community/docs/airrohr/nodemcu-v3-bme280.jpeg)
+Este debería ser el resultado final:
+<img src="https://sensor.community/docs/airrohr/nodemcu-v3-bme280.jpeg" width="600"  />
 
-##### [](https://sensor.community/airrohr/es#false)Cuando lo termines, así es como debe mostrarse:
-
-### [](https://sensor.community/airrohr/es#Cablear_el_SDS011)Cablear el SDS011
+### Cableado del SDS011
 
 Los pins están numerados de DERECHA a IZQUIERDA, asegúrate al conectar los cables que están situados en los pins, ya que la mayoría de los cables Dupont encajan entre los pines.
 
@@ -110,13 +110,15 @@ SDS011 Pin 6 -> unused
 SDS011 Pin 7 -> unused
 ```
 
-### [](https://sensor.community/airrohr/es#Soldar_el_BME280)Soldar el BME280
+### Soldar el BME280
 
-![](https://sensor.community/docs/airrohr/solder-a-bme-280.jpeg) ![](https://sensor.community/docs/airrohr/solder-bme-280.jpeg)
+<img src="https://sensor.community/docs/airrohr/solder-a-bme-280.jpeg" width="600"  />
 
 Conecta la cabeza del pin con el puerto BME280. Suéldalo desde la parte trasera. Los huecos entre los pins son muy pequeños, ten paciencia y cuidado. El truco está en soldar la punta de hierro al pin, calentarlo un poco y, entonces soldarlo con cuidado.
 
-### [](https://sensor.community/airrohr/es#Cablear_el_BME280)Cablear el BME280
+<img src="https://sensor.community/docs/airrohr/solder-bme-280.jpeg" width="600"  />
+
+### Cablear el BME280
 
 Los pins están numerados de IZQUIERDA a DERECHA
 
@@ -127,46 +129,44 @@ SDA -> PIN D3
 SCL -> Pin D4
 ```
 
-### [](https://sensor.community/airrohr/es#Atalo_todo_junto)Átalo todo junto
+### Montaje del sensor
 
-##### [](https://sensor.community/airrohr/es#false)Ata el NodeMCU y el SDS011 juntos
+#### Ata el NodeMCU y el SDS011 juntos
 
-![](https://sensor.community/docs/airrohr/tie-air-quality-sensor-together.jpeg) Usa un cable para conectar el NodeMCU (ESP8266) y el sensor SDS011 sensor para que la antena de Wifi emita desde el sensor.
+<img src="https://sensor.community/docs/airrohr/tie-air-quality-sensor-together.jpeg" width="800" />
 
-##### [](https://sensor.community/airrohr/es#false)Conecta el tubo flexible
+Usa un cable para conectar el NodeMCU (ESP8266) y el sensor SDS011 sensor para que la antena de Wifi emita desde el sensor.
 
-![](https://sensor.community/docs/airrohr/sds011-with-tube.jpeg) ![](https://sensor.community/docs/airrohr/bme280-tied-to-tube.jpeg) * Conecta el tubo flexible al sensor SDS011 * Use otro cable conector para enganchar el sensor de temperatura BME280 al tubo * Pasa el cable USB a través del tubo. Monta el SDS011 con el NodeMCU hacia la parte de arriba y el ventilador hacia la parte de abajo ##### Pulsa el sensor en el tubo * Aprieta las partes en el tubo, así estará junto dentro. * El cable USB, el tubo flexible y el BME280 deben salir al final del tubo. * Aprieta el otro cable dentro del primero. ![](https://sensor.community/docs/airrohr/sds011-jammed-into-tube.jpeg)
+#### Conecta el tubo flexible
+<img src="https://sensor.community/docs/airrohr/sds011-with-tube.jpeg" width="800" />
 
-##### [](https://sensor.community/airrohr/es#false)Para acabar
+<img src="https://sensor.community/docs/airrohr/bme280-tied-to-tube.jpeg" width="800" />
+
+- Conecta el tubo flexible al sensor SDS011 * Use otro cable conector para enganchar el sensor de temperatura BME280 al tubo * Pasa el cable USB a través del tubo. Monta el SDS011 con el NodeMCU hacia la parte de arriba y el ventilador hacia la parte de abajo ##### Pulsa el sensor en el tubo * Aprieta las partes en el tubo, así estará junto dentro. - El cable USB, el tubo flexible y el BME280 deben salir al final del tubo. * Aprieta el otro cable dentro del primero. ![](https://sensor.community/docs/airrohr/sds011-jammed-into-tube.jpeg)
+
+#### Para acabar
 
 -   Coloca el sensor de temperatura en el tubo flexible, así estará en el borde del cable.
-
 -   Corta el tubo flexible y el final del cable.
-
 -   Opcional: puedes cubrir las salidas del tuvo con una fina malla. Así el aire puede circular y los insectos no pueden entrar.
 
     ![](https://sensor.community/docs/airrohr/position-bme280.jpeg)
 
-Configurar[](https://sensor.community/es/sensors/airrohr#Configurar)[](https://github.com/opendata-stuttgart/sensor.community/edit/develop/content/airrohr/en//03-configure.md "edit on Github")
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+## Configurar
 
-### [](https://sensor.community/airrohr/es#Consigue_la_estacion_ID)Consigue la estación ID
+### Consigue la estación ID
 
-1.  Conecta la estación a un cable USB para cargar el sensor.
+1. Conecta la estación a un cable USB para cargar el sensor.
+2. La estación intentará conectarse a la red WiFi configurada. Para una nueva configuración, la conexión fallará y la estación creará una red WiFi con el nombre: __Particulate Matter ID, Feinstaubsensor-ID o airRohr-ID__. El ID es el ChipID (por ejemplo, 13597771). Anota este número, ya que lo necesitarás para el registro
+3. Conecta a la red Wifi creada por la estación (Hotspot) con tu ordenador o móvil. Espera hasta que se establezca la conexión.
+   Usuarios de Android: Si la conexión se acaba inmediatamente, podrías tener desactivada la opción "Smart network switch" en "Connections -> WiFi -> Advanced".
+4. Abre tu navegador y tecla la url siguiente <http://192.168.4.1/>.
 
-2.  La estación intentará conectarse a la red WiFi configurada. Para una nueva configuración, la conexión fallará y la estación creará una red WiFi con el nombre Particulate Matter ID, Feinstaubsensor-ID o airRohr-ID. El ID es el ChipID (por ejemplo, 13597771). Anote este número, ya que lo necesitará para el registro
+> ⚠️ Ten en cuenta que el NodeMCU puede necesitar varios intentes para conectarse a la red WiFi local. Ten paciencia y realiza los pasos varias veces hasta que funcione. Si la configuración del sensor funciona, la red WiFi de la estación no estará disponible y la página de configuración ya no será accesible bajo esta IP 192.168.4.1
 
-3.  Conecta a la red Wifi creada por la estación (Hotspot) con tu ordenador o móvil. Espera hasta que se establezca la conexión.\
-    Android: Si la conexión se acaba inmediatamente, podrías tener desactivada la opción "Smart network switch" en "Connections -> WiFi -> Advanced".
+### Configurar la estación
 
-4.  Abre tu navegador y tecla la url siguiente <http://192.168.4.1/>.
-
-> ⚠️ Tome nota Tenga en cuenta que el NodeMCU puede necesitar varios intentes para conectarse a la red WiFi doméstica. Tenga paciencia y realice los pasos varias veces hasta que funcione. Si la configuración del sensor funciona, la red WiFi de la estación no estará disponible y la página de configuración ya no será accesible bajo esta IP 192.168.4.1
-
-### [](https://sensor.community/airrohr/es#Configurar_la_estacion)Configurar la estación
-
-1.  En la página de 'Configuración' ingrese su SSID (el nombre de la red WiFi de su hogar), la clave de seguridad de la red (en Windows) o la contraseña de WiFi.
-
+1.  En la página de 'Configuración' teclea el SSID (el nombre de la red WiFi de casa), la clave de seguridad de la red (en Windows) o la contraseña de WiFi.
 2.  Si está utilizando el sensor recomendado (SDS011), no es necesario realizar más cambios de configuración.
 
 3.  Haga clic en el botón 'Guardar configuración y reiniciar'. La estación se reiniciará y ya no será accesible de esta manera cuando se conecte a la red WiFi de su hogar.\
