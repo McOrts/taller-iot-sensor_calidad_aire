@@ -174,30 +174,28 @@ Usa un cable para conectar el NodeMCU (ESP8266) y el sensor SDS011 sensor para q
 
 3. Ahora vamos a decirle a dónde queremos que se envién nuestros datos. Marca las opciones que desees en la pestaña de __APIs__
 
-<img src="img/airrohr_config_api.png" width="400" />
+<img src="img/airrohr_config_apis.png" width="400" />
 
 5. Haga clic en el botón 'Guardar configuración y reiniciar'. La estación se reiniciará y ya no será accesible de esta manera cuando se conecte a la red WiFi de su hogar.
-
 
 ![image](https://user-images.githubusercontent.com/23612381/146612697-31ab73b2-5a76-4b1d-848a-6430f33673cc.png)
 
 ### Verifica que la estación está correctamente configurada
 
-Si no realizó ningún otro cambio en el paso anterior que no sea la configuración de la red WiFi, el sensor comenzará a grabar y cargar los datos. Puede verificar que todo funciona correctamente después de aproximadamente 10 minutos dirigiéndote a las siguientes páginas. En estas páginas, busque el ChipID (en el ejemplo anterior 13597771).
+Tras las configuraciones anteriores, el sensor comenzará a grabar y cargar los datos. Puede verificar que todo funcione correctamente después de aproximadamente 10 minutos dirigiéndote a las siguientes páginas. En estas páginas, busque el ChipID (en el ejemplo anterior 13597771).
 
 -   [Sensor data](https://www.madavi.de/sensor/graph.php)
 -   [WiFi signal data](https://www.madavi.de/sensor/signal.php)
 
-Registrarse[](https://sensor.community/es/sensors/airrohr#Registrarse)[](https://github.com/opendata-stuttgart/sensor.community/edit/develop/content/airrohr/en//04-register.md "edit on Github")
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+## Registrarse
 
-### [](https://sensor.community/airrohr/es#Crea_una_cuenta)Crea una cuenta
+### Crea una cuenta
 
 Ve a [devices.sensor.community](https://devices.sensor.community/) para crear una cuenta y conviértete en parte de la red Open Data.
 
-### [](https://sensor.community/airrohr/es#Registra_tu_dispositivo)Registra tu dispositivo
+### Registra tu dispositivo
 
-Una vez creas una cuenta e inicias sesión, podrás registrar tu dispositivo. Completa el formulario para registrar tu dispositivo. Vaya a Inicio -> (Iniciar sesión) - Sensores -> Registrar nuevo sensor
+Una vez creas una cuenta e inicias sesión, podrás registrar tu dispositivo. Completa el formulario para registrar tu dispositivo. Ve a Inicio -> (Iniciar sesión) - Sensores -> Registrar nuevo sensor
 
 -   El ID del sensor es el ChipID del ESP8266 (NodeMCU) que anotaste antes
 -   Tu dirección de correo electrónico no será publicada
@@ -205,10 +203,9 @@ Una vez creas una cuenta e inicias sesión, podrás registrar tu dispositivo. Co
 -   Establece un nombre de sensor personal para que sea más fácil separarlos si tienes varios sensores (como jardín, etc.)
 -   Los alrededores de la estación (Ejemplo: altura sobre el suelo, lado de la carretera, alto volumen de tráfico, campo libre o similar)
 
-Troubleshoot[](https://sensor.community/es/sensors/airrohr#Troubleshoot)[](https://github.com/opendata-stuttgart/sensor.community/edit/develop/content/airrohr/en//05-troubleshoot.md "edit on Github")
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+## Solucionario de problemas
 
-### [](https://sensor.community/airrohr/es#Transmite_de_manera_erronea)¿Transmite de manera errónea?
+### ¿Transmite de manera errónea?
 
 Ingrese lo siguiente en el navegador con sus propios datos: `https://api-rrd.madavi.de/grafana/d/GUaL5aZMz/pm-sensors?orgId=1&var-chipID=esp8266-[ID]`
 
