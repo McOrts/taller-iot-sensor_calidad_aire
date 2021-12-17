@@ -91,10 +91,11 @@ Conecta el NodeMCU a tu ordenador con un cable micro-USB (elige un cable que no 
 ### NodeMCU v3
 
 Nota: estas instrucciones hacen referencia a la versión 3 del NodeMCU. Puede ser reconocido por las conexiones VU y G (ver el dibujo).
-<img src="https://sensor.community/docs/airrohr/airrohr-wiring-sds011-bme280.jpg" width="600"  />
+<img src="https://sensor.community/docs/airrohr/airrohr-wiring-sds011-bme280.jpg" width="400"  />
 
 Este debería ser el resultado final:
-<img src="https://sensor.community/docs/airrohr/nodemcu-v3-bme280.jpeg" width="600"  />
+
+<img src="https://sensor.community/docs/airrohr/nodemcu-v3-bme280.jpeg" width="800"  />
 
 ### Cableado del SDS011
 
@@ -150,11 +151,12 @@ Usa un cable para conectar el NodeMCU (ESP8266) y el sensor SDS011 sensor para q
 -   Corta el tubo flexible y el final del cable.
 -   Opcional: puedes cubrir las salidas del tuvo con una fina malla. Así el aire puede circular y los insectos no pueden entrar.
 
-    ![](https://sensor.community/docs/airrohr/position-bme280.jpeg)
+<img src="https://sensor.community/docs/airrohr/position-bme280.jpeg" width="800" />
 
 ## Configurar
 
 ### Consigue la estación ID
+<img src="img/airrohr_config_initial.png" width="400"  align="left" />
 
 1. Conecta la estación a un cable USB para cargar el sensor.
 2. La estación intentará conectarse a la red WiFi configurada. Para una nueva configuración, la conexión fallará y la estación creará una red WiFi con el nombre: __Particulate Matter ID, Feinstaubsensor-ID o airRohr-ID__. El ID es el ChipID (por ejemplo, 13597771). Anota este número, ya que lo necesitarás para el registro
@@ -166,13 +168,20 @@ Usa un cable para conectar el NodeMCU (ESP8266) y el sensor SDS011 sensor para q
 
 ### Configurar la estación
 
-1.  En la página de 'Configuración' teclea el SSID (el nombre de la red WiFi de casa), la clave de seguridad de la red (en Windows) o la contraseña de WiFi.
-2.  Si está utilizando el sensor recomendado (SDS011), no es necesario realizar más cambios de configuración.
+1. En la página de 'Configuración' teclea el SSID (el nombre de la red WiFi de casa), la clave de seguridad de la red (en Windows) o la contraseña de WiFi.
+2. Accede a la pestaña de __Sensors__ para seleccionar los sensores conectados: BME280 y SDS011
+<img src="img/airrohr_config_sensors.png" width="400" />
 
-3.  Haga clic en el botón 'Guardar configuración y reiniciar'. La estación se reiniciará y ya no será accesible de esta manera cuando se conecte a la red WiFi de su hogar.\
-![](https://sensor.community/docs/airrohr_config_initial.jpg)
+3. Ahora vamos a decirle a dónde queremos que se envién nuestros datos. Marca las opciones que desees en la pestaña de __APIs__
 
-### [](https://sensor.community/airrohr/es#Verifica_que_la_estacion_esta_correctamente_configurada)Verifica que la estación está correctamente configurada
+<img src="img/airrohr_config_api.png" width="400" />
+
+5. Haga clic en el botón 'Guardar configuración y reiniciar'. La estación se reiniciará y ya no será accesible de esta manera cuando se conecte a la red WiFi de su hogar.
+
+
+![image](https://user-images.githubusercontent.com/23612381/146612697-31ab73b2-5a76-4b1d-848a-6430f33673cc.png)
+
+### Verifica que la estación está correctamente configurada
 
 Si no realizó ningún otro cambio en el paso anterior que no sea la configuración de la red WiFi, el sensor comenzará a grabar y cargar los datos. Puede verificar que todo funciona correctamente después de aproximadamente 10 minutos dirigiéndote a las siguientes páginas. En estas páginas, busque el ChipID (en el ejemplo anterior 13597771).
 
