@@ -178,8 +178,6 @@ Usa un cable para conectar el NodeMCU (ESP8266) y el sensor SDS011 sensor para q
 
 5. Haga clic en el botón 'Guardar configuración y reiniciar'. La estación se reiniciará y ya no será accesible de esta manera cuando se conecte a la red WiFi de su hogar.
 
-![image](https://user-images.githubusercontent.com/23612381/146612697-31ab73b2-5a76-4b1d-848a-6430f33673cc.png)
-
 ### Verifica que la estación está correctamente configurada
 
 Tras las configuraciones anteriores, el sensor comenzará a grabar y cargar los datos. Puede verificar que todo funcione correctamente después de aproximadamente 10 minutos dirigiéndote a las siguientes páginas. En estas páginas, busque el ChipID (en el ejemplo anterior 13597771).
@@ -240,15 +238,8 @@ Ingrese lo siguiente en el navegador con sus propios datos: `https://api-rrd.ma
     -   SDS011: LED roja/ventilador encendido después de reiniciar
     -   Reinicia (desconecta el suministrador de energía)
 
--   [INTRODUCCIÓN](https://sensor.community/es/sensors/airrohr#Introduccion)[Lista de compras](https://sensor.community/es/sensors/airrohr#Lista_de_compras)
--   [DRIVER & FIRMWARE](https://sensor.community/es/sensors/airrohr#Driver_and_firmware)[Windows](https://sensor.community/es/sensors/airrohr#Windows)[MacOS](https://sensor.community/es/sensors/airrohr#MacOS)[Linux](https://sensor.community/es/sensors/airrohr#Linux)[Firmware Flasher](https://sensor.community/es/sensors/airrohr#Firmware_Flasher)
--   [ASSEMBLE](https://sensor.community/es/sensors/airrohr#Assemble)[NodeMCU v3](https://sensor.community/es/sensors/airrohr#NodeMCU_v3)[Cablear el SDS011](https://sensor.community/es/sensors/airrohr#Cablear_el_SDS011)[Soldar el BME280](https://sensor.community/es/sensors/airrohr#Soldar_el_BME280)[Cablear el BME280](https://sensor.community/es/sensors/airrohr#Cablear_el_BME280)[Átalo todo junto](https://sensor.community/es/sensors/airrohr#Atalo_todo_junto)
--   [CONFIGURAR](https://sensor.community/es/sensors/airrohr#Configurar)[Consigue la estación ID](https://sensor.community/es/sensors/airrohr#Consigue_la_estacion_ID)[Configurar la estación](https://sensor.community/es/sensors/airrohr#Configurar_la_estacion)[Verifica que la estación está correctamente configurada](https://sensor.community/es/sensors/airrohr#Verifica_que_la_estacion_esta_correctamente_configurada)
--   [REGISTRARSE](https://sensor.community/es/sensors/airrohr#Registrarse)[Crea una cuenta](https://sensor.community/es/sensors/airrohr#Crea_una_cuenta)[Registra tu dispositivo](https://sensor.community/es/sensors/airrohr#Registra_tu_dispositivo)
--   [TROUBLESHOOT](https://sensor.community/es/sensors/airrohr#Troubleshoot)[¿Transmite de manera errónea?](https://sensor.community/es/sensors/airrohr#Transmite_de_manera_erronea)[¿Problemas con el cable USB?](https://sensor.community/es/sensors/airrohr#Problemas_con_el_cable_USB)[¿Problemas electrónicos?](https://sensor.community/es/sensors/airrohr#Problemas_electronicos)
-
 ## Agradecimientos 🙋‍
-¡[Piotr, from Poland](https://dropbox.inf.re/)
-![Sensor.Community](https://sensor.community/)
+[Piotr, from Poland](https://dropbox.inf.re/)
+[Sensor.Community](https://sensor.community/)
 
 **Gracias a todos por hacer del mundo un lugar mejor a través de datos ambientales abiertos y dirigidos por la comunidad.**
