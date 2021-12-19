@@ -201,6 +201,21 @@ Una vez creas una cuenta e inicias sesión, podrás registrar tu dispositivo. Co
 -   Establece un nombre de sensor personal para que sea más fácil separarlos si tienes varios sensores (como jardín, etc.)
 -   Los alrededores de la estación (Ejemplo: altura sobre el suelo, lado de la carretera, alto volumen de tráfico, campo libre o similar)
 
+## Integración don Node-RED
+<img src="img/airrohr-apirest-confguration.png" width="400" align="right" />
+
+### Directa
+El propio firmware del microcontrolador ESP8266 nos permite enviar la información también a un endpoint api-rest. Si el sensor y el servidor están en la misma LAN, la configuración es secilla:
+
+Tenemos que tener en cuenta que no usaremos el puerto por defecto, el 80 si no el 1880, el propio Node-RED para los dashboards. El parseo de la información varia en función de los sensores colocados. Si se usa un BMP280 este sería el flujo:
+
+<img src="img/node-red_flow.png" width="400" 
+
+El código fuente lo tienes [aquí](https://github.com/McOrts/taller-iot-sensor_calidad_aire/blob/main/source/airrohr-node-red_flow.json)
+
+### _Man in the middle_ 
+En este paso en vez de desarrollar un flujo POST tendremos que hacerlo con el método GET de alguno de los repositorios que están persistiendo nuestra información. Aquí hay una buena gúia para hacer estas consultas: https://npm.io/package/homebridge-airrohr
+
 ## Solucionario de problemas
 
 ### ¿Transmite de manera errónea?
@@ -239,6 +254,7 @@ Ingrese lo siguiente en el navegador con sus propios datos: `https://api-rrd.ma
     -   Reinicia (desconecta el suministrador de energía)
 
 ## Agradecimientos 🙋‍
+[Associació de Veïnes de Canamunt](http://www.canamunt.org/)
 [Piotr, from Poland](https://dropbox.inf.re/)
 [Sensor.Community](https://sensor.community/)
 
