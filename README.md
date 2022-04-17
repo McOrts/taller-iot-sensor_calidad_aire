@@ -164,7 +164,7 @@ Usa un cable para conectar el NodeMCU (ESP8266) y el sensor SDS011 sensor para q
    Usuarios de Android: Si la conexión se acaba inmediatamente, podrías tener desactivada la opción "Smart network switch" en "Connections -> WiFi -> Advanced".
 4. Abre tu navegador y tecla la url siguiente <http://192.168.4.1/>.
 
-> ⚠️ Ten en cuenta que el NodeMCU puede necesitar varios intentes para conectarse a la red WiFi local. Ten paciencia y realiza los pasos varias veces hasta que funcione. Si la configuración del sensor funciona, la red WiFi de la estación no estará disponible y la página de configuración ya no será accesible bajo esta IP 192.168.4.1
+> ⚠️ Ten en cuenta que el NodeMCU puede necesitar varios intentos para conectarse a la red WiFi local. Ten paciencia y realiza los pasos varias veces hasta que funcione. Si la configuración del sensor funciona, la red WiFi de la estación no estará disponible y la página de configuración ya no será accesible bajo esta IP 192.168.4.1
 
 ### Configurar la estación
 
