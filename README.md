@@ -31,6 +31,8 @@ La dispersión de la luz puede ser inducida cuando las partículas pasan por el 
     -   [via Aliexpress](https://www.aliexpress.com/wholesale?catId=0&initiative_id=SB_20200308040440&SearchText=bme280+-5V+%2B3.3V)
     -   [via Nettgio](https://nettigo.eu/products/module-pressure-humidity-and-temperature-sensor-bosch-bme280)
     -   [via Berrybase](https://www.berrybase.de/sensoren-module/feuchtigkeit/gy-bme280-breakout-board-3in1-sensor-f-252-r-temperatur-luftfeuchtigkeit-und-luftdruck?c=92)
+-   DHT22 3-Pin, temperatura y humedad (Alternativa buena para interiores).
+-   [via Aliexpress](https://www.aliexpress.com/wholesale?catId=0&initiative_id=SB_20220806101441&SearchText=dht22)
 -   [Cable](http://www.aliexpress.com/wholesale?groupsort=1&SortType=price_asc&SearchText=Dupont+cable+20cm+female-female)
 -   [Cable USB por ejemplo: plano 2m Micro-USB](https://www.aliexpress.com/wholesale?catId=0&initiative_id=SB_20200308040708&SearchText=micro+usb+flat+cable+2m)
 -   [Fuente de alimentación USB](https://www.aliexpress.com/wholesale?catId=0&initiative_id=SB_20200308040834&SearchText=single+micro+usb+eu+power+supply)
@@ -91,7 +93,10 @@ Conecta el NodeMCU a tu ordenador con un cable micro-USB (elige un cable que no 
 ### NodeMCU v3
 
 Nota: estas instrucciones hacen referencia a la versión 3 del NodeMCU. Puede ser reconocido por las conexiones VU y G (ver el dibujo).
+
 <img src="https://sensor.community/docs/airrohr/airrohr-wiring-sds011-bme280.jpg" width="400"  />
+<img src="img/nodemcu-v3-schaltplan-sds011.jpg" width="400"  />
+
 
 Este debería ser el resultado final:
 
