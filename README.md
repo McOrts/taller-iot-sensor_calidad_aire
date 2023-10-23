@@ -32,7 +32,7 @@ La dispersión de la luz puede ser inducida cuando las partículas pasan por el 
     -   [via Nettgio](https://nettigo.eu/products/module-pressure-humidity-and-temperature-sensor-bosch-bme280)
     -   [via Berrybase](https://www.berrybase.de/sensoren-module/feuchtigkeit/gy-bme280-breakout-board-3in1-sensor-f-252-r-temperatur-luftfeuchtigkeit-und-luftdruck?c=92)
 -   DHT22 3-Pin, temperatura y humedad (Alternativa buena para interiores).
--   [via Aliexpress](https://www.aliexpress.com/wholesale?catId=0&initiative_id=SB_20220806101441&SearchText=dht22)
+    -   [via Aliexpress](https://www.aliexpress.com/wholesale?catId=0&initiative_id=SB_20220806101441&SearchText=dht22)
 -   [Cable](http://www.aliexpress.com/wholesale?groupsort=1&SortType=price_asc&SearchText=Dupont+cable+20cm+female-female)
 -   [Cable USB por ejemplo: plano 2m Micro-USB](https://www.aliexpress.com/wholesale?catId=0&initiative_id=SB_20200308040708&SearchText=micro+usb+flat+cable+2m)
 -   [Fuente de alimentación USB](https://www.aliexpress.com/wholesale?catId=0&initiative_id=SB_20200308040834&SearchText=single+micro+usb+eu+power+supply)
