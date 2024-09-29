@@ -164,8 +164,8 @@ Usa un cable para conectar el NodeMCU (ESP8266) y el sensor SDS011 sensor para q
 <img src="img/airrohr_config_initial.png" width="400"  align="left" />
 
 1. Conecta la estación a un cable USB para cargar el sensor.
-2. La estación intentará conectarse a la red WiFi configurada. Para una nueva configuración, la conexión fallará y la estación creará una red WiFi con el nombre: __Particulate Matter ID, Feinstaubsensor-ID o airRohr-ID__. El ID es el ChipID (por ejemplo, 13597771). Anota este número, ya que lo necesitarás para el registro
-3. Conecta a la red Wifi creada por la estación (Hotspot) con tu ordenador o móvil. Espera hasta que se establezca la conexión.
+2. La estación intentará conectarse a la red WiFi configurada. Para una nueva configuración, la conexión fallará y la estación creará una red WiFi con el nombre: **airRohr-ID**. El ID es el ChipID (por ejemplo, 13597771). Anota este número, ya que lo necesitarás para el registro
+3. Conecta a esta red Wifi creada por la estación (Hotspot) con tu ordenador o móvil. **El password es: airrohrcfg**. Espera hasta que se establezca la conexión.
    Usuarios de Android: Si la conexión se acaba inmediatamente, podrías tener desactivada la opción "Smart network switch" en "Connections -> WiFi -> Advanced".
 4. Abre tu navegador y tecla la url siguiente <http://192.168.4.1/>.
 
